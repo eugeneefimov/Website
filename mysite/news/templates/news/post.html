@@ -1,0 +1,8 @@
+{% extends "news/wrapper.html" %}
+
+{% block content %}
+    <h2 class="text-info">{{document.title}}</h2>
+    <h6 class="text-info">Опубликовано: {{document.date|date:"Y-m-d в H:i:s"}}</h6>
+    <p>{{document.post|safe|linebreaks}}</p>
+    <a href="download/{{document.title}}"><button class="btn btn-outline-warning mr-3">Download</button></a>
+{% endblock %}

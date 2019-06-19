@@ -1,0 +1,11 @@
+{% extends "news/wrapper.html" %}
+
+{% block content %}
+
+    <h3> Документы</h3>
+
+   {% for post in object_list %}
+        <a href="/news/list/{{post.id}}"><h3>{{post.title}}</h3></a>
+        <h5>{{post.date|date:"d-m-Y"}}</h5>
+    {% endfor%}
+{% endblock %}

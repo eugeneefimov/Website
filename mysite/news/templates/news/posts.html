@@ -1,0 +1,12 @@
+{% extends "news/wrapper.html" %}
+
+{% block content %}
+
+    <p>Здесь можно загрузить документ. Title - краткое описание</p>
+    <form enctype="multipart/form-data" action="" method="post"> =
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Save">
+    </form>
+
+{% endblock %}
